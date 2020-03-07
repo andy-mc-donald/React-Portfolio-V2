@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles({
   root: {
@@ -10,8 +11,8 @@ const useStyles = makeStyles({
     padding: "0 30px"
   },
   icon: {
-    color: 'white',
-    fontSize: 'xl',
+    color: "white",
+    fontSize: "xl",
     height: 40,
     marginLeft: "auto"
   }
@@ -21,7 +22,9 @@ function NavBar() {
   const classes = useStyles();
   return (
     <AppBar className={classes.root}>
-      <GitHubIcon className={classes.icon}></GitHubIcon>
+      <IconButton aria-label="github" className={classes.icon}>
+        <GitHubIcon />
+      </IconButton>
     </AppBar>
   );
 }

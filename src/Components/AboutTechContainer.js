@@ -17,10 +17,10 @@ function AboutTechContainer() {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
-      <Grid item sm={6}>
+      <Grid item xs={12} sm={6}>
         <AboutMe />
       </Grid>
-      <Grid item sm={6}>
+      <Grid item xs={12} sm={6}>
         <TechStack />
       </Grid>
     </Grid>

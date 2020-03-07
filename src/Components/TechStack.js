@@ -5,7 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
     root: {
-        height: '90vh'
+        height: '90vh',
+        textAlign: 'center'
     }
   });
 
@@ -15,7 +16,7 @@ function TechStack(){
         <Paper 
         className={classes.root}
         elevation={2}>
-            <Typography noWrap>
+            <Typography variant="h3">
                 Tech Stack
             </Typography>
         </Paper>
