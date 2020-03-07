@@ -15,7 +15,7 @@ function TechStack(){
         <Paper 
         className={classes.root}
         elevation={2}>
-            <Typography>
+            <Typography noWrap>
                 Tech Stack
             </Typography>
         </Paper>

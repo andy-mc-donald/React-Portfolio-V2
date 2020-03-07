@@ -8,18 +8,19 @@ const useStyles = makeStyles({
   root: {
     flexGrow: 1,
     display: "flex",
-    flexWrap: "wrap"
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   }
 });
 
 function AboutTechContainer() {
   const classes = useStyles();
   return (
-    <Grid container className={classes.root} spacing={24}>
-      <Grid item sm spacing="relative">
+    <Grid container className={classes.root}>
+      <Grid item sm={6}>
         <AboutMe />
       </Grid>
-      <Grid item sm>
+      <Grid item sm={6}>
         <TechStack />
       </Grid>
     </Grid>

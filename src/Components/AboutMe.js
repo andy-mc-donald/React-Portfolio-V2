@@ -13,7 +13,7 @@ function AboutMe(){
     const classes = useStyles();
     return(
         <Paper className={classes.root} elevation={2}>
-             <Typography>
+             <Typography noWrap>
                 About me
             </Typography>
         </Paper>

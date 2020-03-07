@@ -40,8 +40,8 @@ function LandingText() {
     <Grid
       container
       className={classes.root}
-      spacing={24}
-      spacing={4}
+      // spacing={24}
+      // spacing={4}
       direction="column"
       justify="center"
       alignItems="center"
