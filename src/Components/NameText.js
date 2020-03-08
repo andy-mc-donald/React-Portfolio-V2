@@ -29,6 +29,8 @@ const useStyles = makeStyles(theme => ({
   arrow: {
     fontSize: "2rem",
     color: "white",
+    // display: 'flex',
+    // alignItems: 'flex-end'
     // paddingTop: 100
   }
 }));
@@ -46,7 +48,7 @@ function LandingText() {
       justify="center"
       alignItems="center"
     >
-      <Grid item xs={0} justify="center">
+      <Grid item xs={0}>
         <Typography
           className={classes.text}
           variant="h2"
@@ -56,7 +58,7 @@ function LandingText() {
         </Typography>
         </Grid>
 
-        <Grid item xs={0} justify="center">
+        <Grid item xs={0}>
         <Typography
           className={classes.text}
           variant="h2"
@@ -65,8 +67,7 @@ function LandingText() {
           Software Developer
         </Typography>
       </Grid>
-
-      <Grid item xs={0} justify="center" className={classes.arrow}>
+      <Grid item xs={0} className={classes.arrow}>
         <ExpandMoreIcon />
       </Grid>
     </Grid>
