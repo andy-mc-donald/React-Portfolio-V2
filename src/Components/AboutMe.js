@@ -8,9 +8,11 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import AndyPic from "../Assets/about-me-images-svgs/Andy_McDonald.jpg";
 // import SvgIcon from '@material-ui/core/SvgIcon';
+import IconButton from "@material-ui/core/IconButton";
 import { ReactComponent as FAC } from "../Assets/about-me-images-svgs/FAC_logo.svg";
 import { ReactComponent as FCC } from "../Assets/about-me-images-svgs/FreeCodeCamp.svg";
 import { ReactComponent as CodeWars } from "../Assets/about-me-images-svgs/Codewars_logo.svg";
+// import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles({
   root: {
@@ -21,7 +23,7 @@ const useStyles = makeStyles({
     // padding: 10
   },
   title: {
-    paddingBottom: '3%'
+    paddingBottom: "3%"
   },
   picture: {
     // height: 'auto',
@@ -36,21 +38,20 @@ const useStyles = makeStyles({
     borderRadius: "50%"
   },
   description: {
-    paddingTop: '3%',
+    paddingTop: "3%",
     maxWidth: "350px"
   },
   // iconBox: {
   //   display: 'flex',
   //   flexDirection: 'row',
   //   justify: 'space-around'
-  // }, 
+  // },
   icon: {
-    maxWidth: '350px',
+    maxWidth: "350px",
     width: "auto",
-    height: "70px",
-    padding: "8px"   
+    height: "50px",
+    padding: "8px"
   }
-
 });
 
 function AboutMe() {
@@ -70,15 +71,21 @@ function AboutMe() {
         <Typography variant="body1" className={classes.description}>
           I am a software developer, a recent graduate of the Founders and
           Coders bootcamp in London and a former journalist. Currently seeking a
-          full-time junior dev role. I am a software developer, a recent graduate of the Founders and
-          Coders bootcamp in London and a former journalist. Currently seeking a
-          full-time junior dev role.
+          full-time junior dev role. I am a software developer, a recent
+          graduate of the Founders and Coders bootcamp in London and a former
+          journalist. Currently seeking a full-time junior dev role.
         </Typography>
       </CardContent>
       <div justify="space-around">
-      <FAC className={classes.icon}/>
-      <FCC className={classes.icon}/>
-      <CodeWars className={classes.icon}/>
+        <IconButton aria-label="Founders and Coders">
+          <FAC className={classes.icon} />
+        </IconButton>
+        <IconButton aria-label="FreeCodeCamp profile">
+          <FCC className={classes.icon} />
+        </IconButton>
+        <IconButton aria-label="Codewars profile">
+          <CodeWars className={classes.icon} />
+        </IconButton>
       </div>
     </Card>
   );
