@@ -6,46 +6,61 @@ import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
-import AndyPic from '../Assets/about-me-images-svgs/Andy_McDonald.jpg';
+import AndyPic from "../Assets/about-me-images-svgs/Andy_McDonald.jpg";
 
 const useStyles = makeStyles({
   root: {
     height: "90vh",
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
     // padding: 10
   },
-  text:{
-    paddingBottom: 20,
+  title: {
+    paddingBottom: '3%'
   },
-  media:{
+  media: {
     // height: 'auto',
     // width: '50%',
-    height: '45%',
-    width: 'auto',
-    maxWidth: '350px',
+    height: "43%",
+    width: "auto",
+    maxWidth: "350px",
+    maxHeight: "350px",
     // maxHeight: '350px',
     // padding: '10%',
     // paddingTop: '5%',
-    borderRadius: '50%'
+    borderRadius: "50%"
+  },
+  description: {
+    paddingTop: '3%',
+    maxWidth: "350px"
   }
+
 });
 
 function AboutMe() {
   const classes = useStyles();
   return (
     <Card className={classes.root} elevation={2}>
-      <Typography className={classes.text} variant="h3">About me</Typography>
+      <Typography className={classes.title} variant="h3">
+        About me
+      </Typography>
       <CardMedia
         className={classes.media}
         src={AndyPic}
-        component= 'img'
+        component="img"
         title="Headshot"
-        // xs={8}
-        // sm={2}
       />
+      <CardContent>
+        <Typography variant="body1" className={classes.description}>
+          I am a software developer, a recent graduate of the Founders and
+          Coders bootcamp in London and a former journalist. Currently seeking a
+          full-time junior dev role. I am a software developer, a recent graduate of the Founders and
+          Coders bootcamp in London and a former journalist. Currently seeking a
+          full-time junior dev role.
+        </Typography>
+      </CardContent>
     </Card>
-    );
+  );
 }
 export default AboutMe;
