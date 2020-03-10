@@ -9,7 +9,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import IconButton from "@material-ui/core/IconButton";
 import WebIcon from "@material-ui/icons/Web";
 import { makeStyles } from "@material-ui/core/styles";
-import UpSkillMeP
+import UpSkillMePic from "../Assets/project-images/UpSkillMe.png";
 
 const useStyles = makeStyles({
     root: {
@@ -22,9 +22,10 @@ const classes = useStyles();
 return (
     <Card className={classes.root}>
       <CardHeader title="UpSkillMe" />
-      <CardMedia image="../Assets/project-images/UpSkillMe.png" title="UpSkillMe" />
-      <CardContent>ic
-        <Typography variant="body2" color="textSecondary" component="p">
+      <CardMedia src={UpSkillMePic} component="img" title="UpSkillMe" />
+      <CardContent>
+        {/* <Typography variant="body2" color="textSecondary" component="p"> */}
+        <Typography paragraph color="textSecondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dui
           erat, dictum vitae tellus ac, malesuada venenatis nunc. Curabitur
           ornare orci at semper laoreet. Aliquam sed dignissim eros. Nullam
