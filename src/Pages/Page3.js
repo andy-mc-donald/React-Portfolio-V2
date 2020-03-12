@@ -12,10 +12,19 @@ import Trainspiration from "../Projects/Trainspiration";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    // spacing: 3
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center'
+    // width: '100%'
   }, 
   container: {
-    padding:'2rem',
+    // padding: '2rem',
+    width: '100%',
+    margin: '2.5rem',
+    ['@media (max-width:600px)']: {
+      margin: '0.5rem',
+
+  },
   }
 }));
 
@@ -27,7 +36,7 @@ function Page3() {
         {/* <Typography className={classes.title} variant="h3">
           Projects
         </Typography> */}
-      <Grid className={classes.container} container spacing={4}>
+      <Grid className={classes.container} container spacing={3}>
         <Grid item xs={12} sm={6} md={4}>
           <UpSkillMe />
         </Grid>
