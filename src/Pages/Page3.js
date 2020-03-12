@@ -36,7 +36,7 @@ function Page3() {
         {/* <Typography className={classes.title} variant="h3">
           Projects
         </Typography> */}
-      <Grid className={classes.container} container spacing={3}>
+      <Grid container className={classes.container} spacing={3}>
         <Grid item xs={12} sm={6} md={4}>
           <UpSkillMe />
         </Grid>
