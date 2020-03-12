@@ -13,7 +13,7 @@ import WikipediaLookupPic from "../Assets/project-images/WikipediaCountryLookup.
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 500,
+      // maxWidth: 500,
     }
 })
 

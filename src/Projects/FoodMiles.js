@@ -13,7 +13,7 @@ import FoodMilesPic from "../Assets/project-images/FoodMiles.png";
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 500,
+      // maxWidth: 500,
     }
 })
 

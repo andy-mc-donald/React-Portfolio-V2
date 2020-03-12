@@ -13,7 +13,7 @@ import ProjectFearPic from "../Assets/project-images/ProjectFear.png";
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 500,
+      // maxWidth: 500,
     }
 })
 

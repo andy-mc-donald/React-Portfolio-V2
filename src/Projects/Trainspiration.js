@@ -13,7 +13,7 @@ import TrainspirationPic from "../Assets/project-images/Trainspiration.png";
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 500,
+      // maxWidth: 500,
     }
 })
 

@@ -13,7 +13,7 @@ import UpSkillMePic from "../Assets/project-images/UpSkillMe.png";
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 500,
+      // maxWidth: 500,
     }
 })
 

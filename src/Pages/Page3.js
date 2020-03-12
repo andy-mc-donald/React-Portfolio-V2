@@ -11,7 +11,11 @@ import Trainspiration from "../Projects/Trainspiration";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    // spacing: 3
+  }, 
+  container: {
+    padding:'2rem',
   }
 }));
 
@@ -23,27 +27,25 @@ function Page3() {
         {/* <Typography className={classes.title} variant="h3">
           Projects
         </Typography> */}
-      <Grid container>
-        <Grid item>
+      <Grid className={classes.container} container spacing={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <UpSkillMe />
         </Grid>
-        <Grid item>
+        <Grid item xs={12} sm={6} md={4}>
           <FoodMiles />
         </Grid>
-        <Grid item>
+        <Grid item xs={12} sm={6} md={4}>
           <BugBears />
         </Grid>
-        <Grid item>
+        <Grid item xs={12} sm={6} md={4}>
           <ProjectFear />
         </Grid>
-        <Grid item>
+        <Grid item xs={12} sm={6} md={4}>
           <WikipediaLookup />
         </Grid>
-        <Grid item>
+        <Grid item xs={12} sm={6} md={4}>
           <Trainspiration />
         </Grid>
-        <Grid item></Grid>
-        <Grid item></Grid>
       </Grid>
     </div>
   );

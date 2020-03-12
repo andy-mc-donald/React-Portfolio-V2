@@ -13,7 +13,7 @@ import BugBearsPic from "../Assets/project-images/BugBears.png";
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 500,
+      // maxWidth: 500,
     }
 })
 
