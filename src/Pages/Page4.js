@@ -2,6 +2,8 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 // import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import IconButton from "@material-ui/core/IconButton";
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,6 +28,9 @@ function Page4() {
       <Grid container className={classes.container}>
         <Grid item xs={12} sm={6} className={classes.item}>
           <h2>Contact</h2>
+          <IconButton>
+              <GitHubIcon />
+          </IconButton>
           <p>Blah blah blah</p>
           <p>Blah blah blah</p>
           <p>Blah blah blah blah ah </p>

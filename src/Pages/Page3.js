@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: 'palegoldenrod'
     // width: '100%'
   }, 
   container: {
