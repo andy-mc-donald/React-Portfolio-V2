@@ -39,24 +39,26 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'pink',
     boxShadow: 'none',
     // paddingLeft: '30%',
-    height: '3rem',
+    height: '4rem',
+    // padding: '1rem'
     // width: '50%',
   },
   cardCont: {
     // display: "flex",
     // flexDirection: "column",
-    // padding: 20
+    padding: 0
   },
 
   form: {
     display: "flex",
     flexDirection: "column",
-    margin: 20,
-    padding: 20,
+    // margin: 20,
+    // padding: 20,
   }, 
 
   button: {
     width: '20%',
+    marginTop: '1rem',
   }
 }));
 
@@ -72,7 +74,7 @@ function Page4() {
             <div>
               <CardContent>
                 <IconButton>
-                  <GitHubIcon />
+                  <GitHubIcon/>
                 </IconButton>
               </CardContent>
             </div>
@@ -116,7 +118,8 @@ function Page4() {
         </Grid>
 
         <Grid item xs={12} sm={6} className={classes.item}>
-          <div className={classes.form}>
+          <form className={classes.form}>
+            <h2>Contact</h2>
           <FormControl>
             <InputLabel htmlFor="name">Name</InputLabel>
             <Input id="name" type="text" />
@@ -129,13 +132,13 @@ function Page4() {
 
           <FormControl>
             <InputLabel htmlFor="email">Message</InputLabel>
-            <Input id="email" multiline rows={10} />
+            <Input id="email" multiline rows={8} />
           </FormControl>
 
           <Button className={classes.button} variant="contained" color="primary" size="medium">
             Send
           </Button>
-          </div>
+          </form>
         </Grid>
       </Grid>
     </div>
