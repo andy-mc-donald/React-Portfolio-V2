@@ -24,41 +24,36 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1
   },
   githubicon: {
+    // margin: "2.5rem",
     fontSize: "xl",
     marginRight: "auto",
     flexDirection: "flex-end"
-    // margin: "2.5rem",
-  }, 
+  },
   mainContainer: {
-    // width: "100%",
-    // margin: "2.5rem",
-    // ["@media (max-width:600px)"]: {
-    //   margin: "0.5rem"
-    // }
-    // direction:"row",
-    // justify:"flex-end",
-    // alignItems:"center",
-    height: "60vh",
-    // fontSize: "2.5rem",
-    // padding: '0px',
-    // overflow: 'hidden', 
+    height: "60vh"
   },
   picContainer: {
-    overflow: 'hidden', 
+    overflow: "hidden"
   },
   picture: {
-    width: '140%',
-    left: '-50%',  
-    position: 'relative',
-    borderRadius: '30%'
-  }, 
+    width: "140%",
+    left: "-50%",
+    position: "relative",
+    borderRadius: "30%"
+  },
   text: {
     // margin: 'auto',
-    padding: '0px',
+    padding: "0px",
     fontSize: "2.5rem",
-    '@media (max-width:600px)': {
-        fontSize: '1.1rem',
-        }
+    "@media (max-width:600px)": {
+      fontSize: "1.1rem"
+    }
+  },
+  buttonContainer: {
+    height: "10vh",
+  }, 
+  button: {
+    width: "30vw",
   }
 }));
 
@@ -69,7 +64,6 @@ function Page1pt2() {
     <div className={classes.root}>
       <Grid
         container
-        // className={classes.container}
         direction="row"
         justify="flex-end"
         alignItems="center"
@@ -83,17 +77,47 @@ function Page1pt2() {
 
       <Grid container direction="row" className={classes.mainContainer}>
         <Grid item xs={2} className={classes.picContainer}>
-            <img src={AndyPic} alt="Andy McDonald picture" className={classes.picture}/>
+          <img
+            src={AndyPic}
+            alt="Andy McDonald picture"
+            className={classes.picture}
+          />
         </Grid>
         <Grid item xs={9} className={classes.text}>
-          <h1 style={{margin: 0}}>
+          <h1 style={{ margin: 0 }}>
             Hi, I’m Andy McDonald, a junior software developer, a graduate of
             the Founders and Coders bootcamp in London and a former journalist.
           </h1>
         </Grid>
       </Grid>
 
-      <Grid container></Grid>
+      <Grid 
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        className={classes.buttonContainer}
+      >
+        <Grid item>
+          <Button variant="contained" size="large" color="primary" href="" className={classes.button}>
+            Download CV
+          </Button>
+        </Grid>
+      </Grid>
+
+      <Grid 
+       container
+       direction="row"
+       alignItems="center"
+       className={classes.svgContainer}
+      >
+          <Grid item>
+
+          </Grid>
+          <Grid item>
+
+          </Grid>
+      </Grid>
     </div>
   );
 }
