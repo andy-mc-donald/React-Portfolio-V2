@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1
   },
   githubiconContainer: {
-    // height: '5vh'
+    height: '5vh'
   },
   githubicon: {
     // margin: "2.5rem",
@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "flex-end"
   },
   mainContainer: {
-    height: "65%",
+    height: "65vh",
     // maxheight: "100vh"
     overflow: "auto",
     backgroundColor: "grey"
@@ -117,20 +117,28 @@ const useStyles = makeStyles(theme => ({
     // },         
   },
   buttonContainer: {
-    height: "10%",
+    height: "10vh",
     backgroundColor: "yellow",
   },
   button: {
     width: "40vw",
     maxWidth: "500px",
-    fontSize: "1.5rem",
+    fontSize: "1.4rem",
     "@media (max-width:600px)": {
         // width: "50vw",
-    fontSize: "0.9rem",
-    }
+    fontSize: "1.2rem",
+    },
+    "@media (max-width:460px)": {
+      // width: "50vw",
+    fontSize: "1.0rem",
+  }, 
+  "@media (max-width:403px)": {
+    // width: "50vw",
+fontSize: "0.8rem",
+}
   },
   svgContainer:{
-      height: '15vh',
+      height: '20vh',
       backgroundColor: 'pink',
       // whiteSpace: 'pre-line'
   }, 
@@ -138,11 +146,27 @@ const useStyles = makeStyles(theme => ({
     height: '60px',
     width: '60px',
     padding: theme.spacing(1),
+    "@media (max-width: 600px)": {
+        height: "50px",
+        width: "50px",
+      }, 
+    "@media (max-width: 528px)": {
+        height: "40px",
+        width: "40px",
+      }, 
+      "@media (max-width: 448px)": {
+        height: "30px",
+        width: "30px",
+      }, 
   },
   svgIcon2:{
     height: '40px',
     width: 'auto',
     padding: theme.spacing(2),
+    "@media (max-width: 600px)": {
+      height: "30px",
+      width: "auto",
+    }, 
   }
 }));
 
@@ -170,8 +194,8 @@ function Page1pt2() {
         </Grid>
         <Grid item xs={9} className={classes.text}>
           <h1 style={{ margin: 0 }}>
-            Hi, I’m Andy McDonald, a junior software developer, a graduate of
-            the Founders and Coders bootcamp in London and a former journalist.
+            Hi, I’m Andy McDonald, a junior software developer, graduate of
+            the Founders and Coders bootcamp in London and former journalist.
           </h1>
         </Grid>
       </Grid>
@@ -204,7 +228,7 @@ function Page1pt2() {
         alignItems="center"
         className={classes.svgContainer}
       >
-        <Grid item sm={8}>
+        <Grid item xs={12} sm={8}>
             <img src={HTML5} className={classes.svgIcon}></img>
             <img src={CSS3} className={classes.svgIcon}></img>
             <img src={JavaScript} className={classes.svgIcon}></img>
@@ -214,7 +238,7 @@ function Page1pt2() {
             <img src={GitHub} className={classes.svgIcon}></img>
             <img src={Linux} className={classes.svgIcon}></img>
         </Grid>
-        <Grid item sm={4}>
+        <Grid item xs={12} sm={4}>
             <img src={FAC} className={classes.svgIcon2}></img>
             <img src={FCC} className={classes.svgIcon2}></img>
             <img src={CodeWars} className={classes.svgIcon2}></img>
