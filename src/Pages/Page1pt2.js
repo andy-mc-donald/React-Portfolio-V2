@@ -17,6 +17,11 @@ import Sass from "../Assets/tech-stack-icons/Sass.svg";
 import FAC from "../Assets/about-me-images-svgs/FAC_logo.svg";
 import FCC from "../Assets/about-me-images-svgs/FreeCodeCamp.svg";
 import CodeWars from "../Assets/about-me-images-svgs/Codewars_logo.svg";
+// import CssBaseline from '@material-ui/core/CssBaseline';
+// import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+
+// let theme = createMuiTheme();
+// theme = responsiveFontSizes(theme);
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,9 +39,10 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "flex-end"
   },
   mainContainer: {
-    height: "65vh",
+    height: "65%",
     // maxheight: "100vh"
-    // overflow: "hidden"
+    overflow: "auto",
+    backgroundColor: "grey"
   },
   picContainer: {
     overflow: "hidden"
@@ -48,124 +54,71 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "30%"
   },
   text: {
-    // margin: 'auto',
+    marginBottom: 'auto',
     padding: "0px",
-    fontSize: "2.6vw",
-    "@media (max-width:1824px)": {
-      fontSize: "2.8vw"
-    },
-    "@media (max-width:1500px)": {
-      fontSize: "2.85vw"
-    },
-    "@media (max-width:1320px)": {
-      fontSize: "3vw"
-    },
-    "@media (max-width:1240px)": {
-      fontSize: "3.2vw"
-    },
-    "@media (max-width:1164px)": {
-      fontSize: "3.3vw"
-    },
-    "@media (max-width:1068px)": {
-      fontSize: "3.4vw"
-    },
-    "@media (max-width:940px)": {
-      fontSize: "3.5vw"
-    },
-    "@media (max-width:876px)": {
-      fontSize: "3.65vw"
-    },
-    "@media (max-width:772px)": {
-      fontSize: "3.8vw"
-    },
-    "@media (max-width: 706px)": {
-      fontSize: "4vw"
-    },
-    "@media (max-width: 690px)": {
-      fontSize: "4.2vw"
-    },
-    "@media (max-width: 636px)": {
-      fontSize: "4.4vw"
-    },
-    "@media (max-width: 573px)": {
-      fontSize: "4.6vw"
-    },
-    "@media (max-width: 522px)": {
-      fontSize: "4.75vw"
-    },
-    "@media (max-width: 474px)": {
-      fontSize: "4.9vw"
-    },
-    "@media (max-width: 420px)": {
-      fontSize: "5.1vw"
-    },
-    "@media (max-width: 390px)": {
-      fontSize: "5.3vw"
-    },
-    "@media (max-width: 375px)": {
-      fontSize: "5.5vw"
-    },
-    "@media (max-width: 356px)": {
-      fontSize: "5.7vw"
-    },
-    // "@media (max-width:1580px)": {
-    //   fontSize: "2.7rem"
+    fontSize: 'calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)))',
+    // fontSize: "2.6vw",
+    // "@media (max-width:1824px)": {
+    //   fontSize: "2.8vw"
     // },
-    // "@media (max-width:1522px)": {
-    //   fontSize: "2.6rem"
+    // "@media (max-width:1500px)": {
+    //   fontSize: "2.85vw"
     // },
-    // "@media (max-width:1249px)": {
-    //   fontSize: "2.5rem"
+    // "@media (max-width:1320px)": {
+    //   fontSize: "3vw"
     // },
-    // "@media (max-width:1201px)": {
-    //   fontSize: "2.4rem"
+    // "@media (max-width:1240px)": {
+    //   fontSize: "3.2vw"
     // },
-    // "@media (max-width:1153px)": {
-    //   fontSize: "2.3rem"
+    // "@media (max-width:1164px)": {
+    //   fontSize: "3.3vw"
     // },
-    // "@media (max-width:1021px)": {
-    //   fontSize: "2.2rem"
+    // "@media (max-width:1068px)": {
+    //   fontSize: "3.4vw"
     // },
-    // "@media (max-width:976px)": {
-    //   fontSize: "2.1rem"
+    // "@media (max-width:940px)": {
+    //   fontSize: "3.5vw"
     // },
-    // "@media (max-width:932px)": {
-    //   fontSize: "2.0rem"
+    // "@media (max-width:876px)": {
+    //   fontSize: "3.65vw"
     // },
-    // "@media (max-width:750px)": {
-    //   fontSize: "1.9rem"
+    // "@media (max-width:772px)": {
+    //   fontSize: "3.8vw"
     // },
-    // "@media (max-width:713px)": {
-    //   fontSize: "1.8rem"
+    // "@media (max-width: 706px)": {
+    //   fontSize: "4vw"
     // },
-    // "@media (max-width:675px)": {
-    //   fontSize: "1.7rem"
+    // "@media (max-width: 690px)": {
+    //   fontSize: "4.2vw"
     // },
-    // "@media (max-width:579px)": {
-    //   fontSize: "1.6rem"
+    // "@media (max-width: 636px)": {
+    //   fontSize: "4.4vw"
     // },
-    // "@media (max-width:535px)": {
-    //   fontSize: "1.55rem"
+    // "@media (max-width: 573px)": {
+    //   fontSize: "4.6vw"
     // },
-    // "@media (max-width:518px)": {
-    //   fontSize: "1.5rem"
+    // "@media (max-width: 522px)": {
+    //   fontSize: "4.75vw"
     // },
-    // "@media (max-width:501px)": {
-    //   fontSize: "1.45rem"
+    // "@media (max-width: 474px)": {
+    //   fontSize: "4.9vw"
     // },
-    // "@media (max-width:419px)": {
-    //   fontSize: "1.40rem"
-    // },   
-    // "@media (max-width:405px)": {
-    //   fontSize: "1.35rem"
+    // "@media (max-width: 420px)": {
+    //   fontSize: "5.1vw"
     // },
-    // "@media (max-width:390px)": {
-    //   fontSize: "1.3rem"
-    // },          
-
+    // "@media (max-width: 390px)": {
+    //   fontSize: "5.3vw"
+    // },
+    // "@media (max-width: 375px)": {
+    //   fontSize: "5.5vw"
+    // },
+    // "@media (max-width: 356px)": {
+    //   fontSize: "5.7vw"
+    // },         
   },
   buttonContainer: {
-    height: "15vh"
+    height: "10%",
+    backgroundColor: "yellow",
   },
   button: {
     width: "40vw",
@@ -178,14 +131,16 @@ const useStyles = makeStyles(theme => ({
   },
   svgContainer:{
       height: '15vh',
+      backgroundColor: 'pink',
+      // whiteSpace: 'pre-line'
   }, 
   svgIcon:{
-    height: '80px',
-    width: 'auto',
+    height: '60px',
+    width: '60px',
     padding: theme.spacing(1),
   },
   svgIcon2:{
-    height: '60px',
+    height: '40px',
     width: 'auto',
     padding: theme.spacing(2),
   }
@@ -196,6 +151,7 @@ function Page1pt2() {
 
   return (
     <div className={classes.root}>
+       {/* <CssBaseline /> */}
       <Grid container direction="row" justify="flex-end" alignItems="center" className={classes.githubiconContainer}>
         <Grid item>
           <IconButton aria-label="github" className={classes.githubicon}>
