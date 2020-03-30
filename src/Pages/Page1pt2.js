@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
   text: {
     marginBottom: 'auto',
     padding: "0px",
-    fontSize: 'calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)))',
+    fontSize: 'calc(14px + (45 - 14) * ((100vw - 300px) / (1600 - 300)))',
     // fontSize: "2.6vw",
     // "@media (max-width:1824px)": {
     //   fontSize: "2.8vw"
