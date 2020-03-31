@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     height: "65vh",
     // maxheight: "100vh"
     overflow: "auto",
-    backgroundColor: "grey"
+    // backgroundColor: "grey"
   },
   picContainer: {
     overflow: "hidden"
@@ -56,7 +56,11 @@ const useStyles = makeStyles(theme => ({
   text: {
     marginBottom: 'auto',
     padding: "0px",
-    fontSize: 'calc(14px + (45 - 14) * ((100vw - 300px) / (1600 - 300)))',
+    fontSize: 'calc(15px + (100 - 15) * ((100vw - 320px) / (1980 - 320)))',
+    "@media screen and (min-aspect-ratio: 5/8)": {
+      fontSize: 'calc(20px + (45 - 20) * ((100vw - 320px) / (1980 - 320)))'
+      },
+
     // fontSize: "2.6vw",
     // "@media (max-width:1824px)": {
     //   fontSize: "2.8vw"
@@ -118,7 +122,7 @@ const useStyles = makeStyles(theme => ({
   },
   buttonContainer: {
     height: "10vh",
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow",
   },
   button: {
     width: "40vw",
@@ -134,12 +138,15 @@ const useStyles = makeStyles(theme => ({
   }, 
   "@media (max-width:403px)": {
     // width: "50vw",
-fontSize: "0.8rem",
-}
+    fontSize: "0.8rem",
+},
+"@media (max-width:344px)": {
+    fontSize: "0.6rem"
+  }
   },
   svgContainer:{
       height: '20vh',
-      backgroundColor: 'pink',
+      // backgroundColor: 'pink',
       // whiteSpace: 'pre-line'
   }, 
   svgIcon:{
