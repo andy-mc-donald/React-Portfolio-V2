@@ -12,7 +12,8 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
+import Typography from '@material-ui/core/Typography';
+// import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,7 +23,11 @@ const useStyles = makeStyles(theme => ({
     // textAlign: 'center'
   },
   container: {
-    padding: "2rem"
+    padding: "2.5rem",
+    '@media (max-width:600px)': {
+      padding: '1rem',
+
+  },
   },
   item: {
     // textAlign: "center",
@@ -39,21 +44,28 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "pink",
     boxShadow: "none",
     // paddingLeft: '30%',
-    height: "4rem"
+    height: "4rem",
     // padding: '1rem'
     // width: '50%',
   },
   cardCont: {
     // display: "flex",
     // flexDirection: "column",
-    padding: 0
+    // padding: 0,
+    // border: '1px solid black'
   },
 
   form: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
     // margin: 20,
     // padding: 20,
+    // border: '1px solid black',
+    padding: '1rem'
+  },
+
+  contactTitle: {
+    // paddingTop: '-23rem',
   },
 
   button: {
@@ -73,14 +85,17 @@ function Page4() {
             <Card className={classes.card}>
               <div>
                 <CardContent>
-                  <IconButton>
+                  <IconButton size="small">
                     <GitHubIcon />
                   </IconButton>
                 </CardContent>
               </div>
               <div>
                 <CardContent>
-                  <h3>GitHub</h3>
+                <Typography variant="h6">
+                  GitHub
+                </Typography>
+                  {/* <h3>GitHub</h3> */}
                 </CardContent>
               </div>
             </Card>
@@ -88,14 +103,16 @@ function Page4() {
             <Card className={classes.card}>
               <div>
                 <CardContent>
-                  <IconButton>
+                  <IconButton  size="small">
                     <LinkedInIcon />
                   </IconButton>
                 </CardContent>
               </div>
               <div>
                 <CardContent>
-                  <h3>LinkedIn</h3>
+                <Typography variant="h6">
+                  LinkedIn
+                </Typography>
                 </CardContent>
               </div>
             </Card>
@@ -103,14 +120,16 @@ function Page4() {
             <Card className={classes.card}>
               <div>
                 <CardContent>
-                  <IconButton>
+                  <IconButton  size="small">
                     <GetAppIcon />
                   </IconButton>
                 </CardContent>
               </div>
               <div>
                 <CardContent>
-                  <h3>CV</h3>
+                <Typography variant="h6">
+                  CV
+                </Typography>
                 </CardContent>
               </div>
             </Card>
@@ -119,7 +138,9 @@ function Page4() {
 
         <Grid item xs={12} sm={6} className={classes.item}>
           <form className={classes.form}>
-            <h2>Contact</h2>
+          <Typography variant="h6" className={classes.contactTitle}>
+                  Contact
+                </Typography>
             <FormControl>
               <InputLabel htmlFor="name">Name</InputLabel>
               <Input id="name" type="text" />
