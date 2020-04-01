@@ -146,6 +146,12 @@ const useStyles = makeStyles(theme => ({
   },
   svgContainer:{
       height: '20vh',
+      marginLeft: '2.5rem',
+      marginRight: '2.5rem',
+      ['@media (max-width:600px)']: {
+        marginLeft: '0.5rem',
+        marginRight: '0.5rem'
+    },
       // backgroundColor: 'pink',
       // whiteSpace: 'pre-line'
   }, 
@@ -165,11 +171,30 @@ const useStyles = makeStyles(theme => ({
         height: "30px",
         width: "30px",
       }, 
+      "@media (max-width: 368px)": {
+        height: "28px",
+        width: "28px",
+      }, 
+      "@media (max-width: 353px)": {
+        height: "25px",
+        width: "25px",
+      }, 
+      "@media (max-width: 328px)": {
+        height: "24px",
+        width: "24px",
+      }, 
   },
   svgIcon2:{
     height: '40px',
     width: 'auto',
-    padding: theme.spacing(2),
+    margin: '0',
+
+    display: 'inline-block',
+    // padding:0,
+    minHeight: 0,
+    minWidth: 0,
+
+    padding: theme.spacing(0),
     "@media (max-width: 600px)": {
       height: "30px",
       width: "auto",
@@ -246,9 +271,15 @@ function Page1pt2() {
             <img src={Linux} className={classes.svgIcon}></img>
         </Grid>
         <Grid item xs={12} sm={4}>
+          <IconButton aria-label="github" padding={0}>
             <img src={FAC} className={classes.svgIcon2}></img>
-            <img src={FCC} className={classes.svgIcon2}></img>
+          </IconButton>
+          <IconButton>
+            <img src={FCC} className={classes.svgIcon2}></img>  
+          </IconButton>
+          <IconButton>  
             <img src={CodeWars} className={classes.svgIcon2}></img>
+            </IconButton>
         </Grid>
       </Grid>
     </div>
