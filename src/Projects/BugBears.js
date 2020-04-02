@@ -12,28 +12,30 @@ import { makeStyles } from "@material-ui/core/styles";
 import BugBearsPic from "../Assets/project-images/BugBears.png";
 
 const useStyles = makeStyles({
-    root: {
-      // maxWidth: 500,
-    }
-})
+  root: {
+    // maxWidth: 500,
+  }, 
+  bold: {
+    color: 'primary'
+  }
+});
 
 function BugBears() {
-const classes = useStyles();
-return (
+  const classes = useStyles();
+  return (
     <Card className={classes.root}>
       <CardHeader title="Bugbears" />
       <CardMedia src={BugBearsPic} component="img" title="Bugbears" />
       <CardContent>
         {/* <Typography variant="body2" color="textSecondary" component="p"> */}
-        <Typography paragraph color="textSecondary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dui
-          erat, dictum vitae tellus ac, malesuada venenatis nunc. Curabitur
-          ornare orci at semper laoreet. Aliquam sed dignissim eros. Nullam
-          varius consectetur euismod. Aliquam hendrerit tincidunt diam.
+        <Typography paragraph variant="body1" color="textSecondary">
+          Bugbears is a dynamic web app that lets users log-in and add their
+          grievances to a list of ‘pet peeves’. The project uses a PostgreSQL
+          database that is connected to a Node.js server and was built using
+          HTML, CSS and JavaScript.
         </Typography>
-        <Typography>
-            Tech stack: Lorem, ipsum, dolor, sit amet
-        </Typography>
+        <Typography paragraph variant="body1"><span className={classes.bold}>Tech stack:</span> HTML, CSS, JavaScript, Node, PostgreSQL, Bcrypt, Tape</Typography>
+        <Typography variant="body1"><span className={classes.bold}>Deployment:</span> Heroku</Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="GitHub link">
@@ -42,7 +44,7 @@ return (
         <IconButton aria-label="Live site">
           <WebIcon />
         </IconButton>
-        </CardActions>
+      </CardActions>
     </Card>
   );
 }

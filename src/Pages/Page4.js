@@ -18,7 +18,10 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "pink"
+    color: 'white',
+    // backgroundColor: "#8d99ae",
+    backgroundColor: "#2B2D42",
+    // backgroundColor: "#071E22",
     // height: "60vh",
     // textAlign: 'center'
   },
@@ -37,6 +40,7 @@ const useStyles = makeStyles(theme => ({
     // margin: '0 auto'
   },
   card: {
+    color: 'white',
     display: "flex",
     flexDirection: "row",
     // justifyContent: "center",
@@ -56,6 +60,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   form: {
+    color: 'white',
     display: "flex",
     flexDirection: "column",
     // margin: 20,
@@ -71,6 +76,9 @@ const useStyles = makeStyles(theme => ({
   button: {
     width: "20%",
     marginTop: "1rem"
+  }, 
+  test: {
+    color: 'yellow'
   }
 }));
 
@@ -142,8 +150,8 @@ function Page4() {
                   Contact
                 </Typography>
             <FormControl>
-              <InputLabel htmlFor="name">Name</InputLabel>
-              <Input id="name" type="text" />
+              <InputLabel htmlFor="name" className={classes.test}>Name</InputLabel>
+              <Input id="name" type="text" className={classes.test} />
             </FormControl>
 
             <FormControl>

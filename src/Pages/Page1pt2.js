@@ -17,6 +17,8 @@ import Sass from "../Assets/tech-stack-icons/Sass.svg";
 import FAC from "../Assets/about-me-images-svgs/FAC_logo.svg";
 import FCC from "../Assets/about-me-images-svgs/FreeCodeCamp.svg";
 import CodeWars from "../Assets/about-me-images-svgs/Codewars_logo.svg";
+import Typography from '@material-ui/core/Typography';
+// import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 // import CssBaseline from '@material-ui/core/CssBaseline';
 // import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
@@ -54,6 +56,8 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "30%"
   },
   text: {
+    // fontFamily: 'Roboto Slab', 'serif';
+    // fontFamily: 'Helvetica Neue',
     marginBottom: 'auto',
     padding: "0px",
     fontSize: 'calc(15px + (100 - 15) * ((100vw - 320px) / (1980 - 320)))',
@@ -146,11 +150,12 @@ const useStyles = makeStyles(theme => ({
   },
   svgContainer:{
       height: '20vh',
-      marginLeft: '2.5rem',
-      marginRight: '2.5rem',
+      paddingLeft: '2.5rem',
+      paddingBottom: '1rem',
+    //   marginRight: '2.5rem',
       ['@media (max-width:600px)']: {
-        marginLeft: '0.5rem',
-        marginRight: '0.5rem'
+        paddingLeft: '0.5rem',
+        // marginRight: '0.5rem'
     },
       // backgroundColor: 'pink',
       // whiteSpace: 'pre-line'
@@ -167,22 +172,34 @@ const useStyles = makeStyles(theme => ({
         height: "40px",
         width: "40px",
       }, 
-      "@media (max-width: 448px)": {
+      "@media (max-width: 457px)": {
         height: "30px",
         width: "30px",
+      }, 
+      "@media (max-width: 377px)": {
+        height: "29px",
+        width: "29px",
       }, 
       "@media (max-width: 368px)": {
         height: "28px",
         width: "28px",
       }, 
+      "@media (max-width: 360px)": {
+        height: "26px",
+        width: "26px",
+      }, 
       "@media (max-width: 353px)": {
         height: "25px",
         width: "25px",
       }, 
-      "@media (max-width: 328px)": {
+      "@media (max-width: 337px)": {
         height: "24px",
         width: "24px",
       }, 
+      "@media (max-width: 327px)": {
+        height: "23px",
+        width: "23px",
+      },
   },
   svgIcon2:{
     height: '40px',
@@ -199,6 +216,13 @@ const useStyles = makeStyles(theme => ({
       height: "30px",
       width: "auto",
     }, 
+    "@media (max-width: 457px)": {
+      height: "28px",
+      width: "auto",
+    }, 
+  }, 
+  test:{
+    color: 'red',
   }
 }));
 
@@ -226,9 +250,13 @@ function Page1pt2() {
         </Grid>
         <Grid item xs={9} className={classes.text}>
           <h1 style={{ margin: 0 }}>
-            Hi, I’m Andy McDonald, a junior software developer, graduate of
-            the Founders and Coders bootcamp in London and former journalist.
+            Hi, I’m Andy McDonald, a junior <span className={classes.test}>software developer</span>, graduate of
+            the Founders and Coders bootcamp in London and former journalist
           </h1>
+          {/* <Typography variant="h1" style={{ margin: 0 }} className={classes.text}>
+          Hi, I’m Andy McDonald, a junior software developer, graduate of
+            the Founders and Coders bootcamp in London and former journalist
+          </Typography> */}
         </Grid>
       </Grid>
 
