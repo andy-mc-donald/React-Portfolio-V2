@@ -58,6 +58,7 @@ const useStyles = makeStyles(theme => ({
   text: {
     // fontFamily: 'Roboto Slab', 'serif';
     // fontFamily: 'Helvetica Neue',
+    color: '#2b2d42',
     marginBottom: 'auto',
     padding: "0px",
     fontSize: 'calc(15px + (100 - 15) * ((100vw - 320px) / (1980 - 320)))',
@@ -129,6 +130,7 @@ const useStyles = makeStyles(theme => ({
     // backgroundColor: "yellow",
   },
   button: {
+    // color: 'yellow',
     width: "40vw",
     maxWidth: "500px",
     fontSize: "1.4rem",
@@ -221,8 +223,8 @@ const useStyles = makeStyles(theme => ({
       width: "auto",
     }, 
   }, 
-  test:{
-    color: 'red',
+  textAccent:{
+    color: '#F2511B',
   }
 }));
 
@@ -249,8 +251,8 @@ function Page1pt2() {
           />
         </Grid>
         <Grid item xs={9} className={classes.text}>
-          <h1 style={{ margin: 0 }}>
-            Hi, I’m Andy McDonald, a junior <span className={classes.test}>software developer</span>, graduate of
+          <h1 style={{ margin: 0 }} color="secondary">
+            Hi, I’m Andy McDonald, a junior <span className={classes.textAccent}>software developer</span>, graduate of
             the Founders and Coders bootcamp in London and former journalist
           </h1>
           {/* <Typography variant="h1" style={{ margin: 0 }} className={classes.text}>
