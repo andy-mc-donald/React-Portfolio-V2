@@ -12,15 +12,29 @@ const theme = createMuiTheme({
   palette: {
     primary:{
       main: '#2b2d42',
-      light: 'rgba(153, 184, 195, 0.17)',
+      // light: 'rgba(153, 184, 195, 0.17)',
+      light: '#eef3f5'
       // dark: '#8d99ae'
     }, 
     secondary: {
       main: '#F2511B', 
-      light: 'rgba(242, 81, 27, 0.5)', 
+      // light: 'rgba(242, 81, 27, 0.5)',
+      light: '#f8a88d' 
       // dark: ''
     }
-  }
+  },
+  overrides:{
+    MuiInput: {
+        underline: {
+             '&:before': {
+                borderBottom: '2px solid #eef3f5',
+              },
+              "&&&&:hover:before": {
+                borderBottom: '2px solid #f8a88d',
+              }
+          },
+    },
+}
 })
 
 function App() {

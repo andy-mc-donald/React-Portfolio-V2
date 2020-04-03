@@ -27,7 +27,8 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: "rgba(153, 184, 195, 0.17)",
+    // background: "rgba(153, 184, 195, 0.17)",
+    background: '#eef3f5',
     height: "100vh",
     flexGrow: 1
   },
@@ -130,7 +131,7 @@ const useStyles = makeStyles(theme => ({
     // backgroundColor: "yellow",
   },
   button: {
-    // color: 'yellow',
+    color: '#eef3f5',
     width: "40vw",
     maxWidth: "500px",
     fontSize: "1.4rem",

@@ -18,7 +18,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    color: 'white',
+    // color: 'white',
     // backgroundColor: "#8d99ae",
     backgroundColor: "#2B2D42",
     // backgroundColor: "#071E22",
@@ -40,12 +40,12 @@ const useStyles = makeStyles(theme => ({
     // margin: '0 auto'
   },
   card: {
-    color: 'white',
+    color: '#eef3f5',
     display: "flex",
     flexDirection: "row",
     // justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "pink",
+    backgroundColor: "#2B2D42",
     boxShadow: "none",
     // paddingLeft: '30%',
     height: "4rem",
@@ -60,7 +60,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   form: {
-    color: 'white',
+    color: '#eef3f5',
     display: "flex",
     flexDirection: "column",
     // margin: 20,
@@ -75,10 +75,12 @@ const useStyles = makeStyles(theme => ({
 
   button: {
     width: "20%",
-    marginTop: "1rem"
+    marginTop: "1rem",
+    color: '#eef3f5'
   }, 
-  test: {
-    color: 'yellow'
+  formText: {
+    // color: 'white'
+    color: '#f8a88d'
   }
 }));
 
@@ -149,25 +151,25 @@ function Page4() {
           <Typography variant="h6" className={classes.contactTitle}>
                   Contact
                 </Typography>
-            <FormControl>
-              <InputLabel htmlFor="name" className={classes.test}>Name</InputLabel>
-              <Input id="name" type="text" className={classes.test} />
+            <FormControl color="secondary">
+              <InputLabel htmlFor="name" className={classes.formText}>Name</InputLabel>
+              <Input id="name" type="text" className={classes.formText} />
             </FormControl>
 
-            <FormControl>
-              <InputLabel htmlFor="email">Email</InputLabel>
-              <Input id="email" type="email" />
+            <FormControl color="secondary">
+              <InputLabel htmlFor="email" className={classes.formText}>Email</InputLabel>
+              <Input id="email" type="email" className={classes.formText}/>
             </FormControl>
 
-            <FormControl>
-              <InputLabel htmlFor="email">Message</InputLabel>
-              <Input id="email" multiline rows={8} />
+            <FormControl color="secondary">
+              <InputLabel htmlFor="email" className={classes.formText}>Message</InputLabel>
+              <Input id="email" multiline rows={8} className={classes.formText}/>
             </FormControl>
 
             <Button
               className={classes.button}
               variant="contained"
-              color="primary"
+              color="secondary"
               size="medium"
               buttonStyle={{ borderRadius: 50 }}
               style={{ borderRadius: 50 }}

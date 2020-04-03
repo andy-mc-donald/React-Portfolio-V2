@@ -31,6 +31,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   title: {
+    color: '#eef3f5',
+    textShadow: '2px 2px #2b2d42',
     paddingLeft: "3.3rem",
     paddingTop: "1.5rem",
     // paddingBottom: "-1.5rem",
