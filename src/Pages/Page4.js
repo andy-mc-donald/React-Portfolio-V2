@@ -13,6 +13,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import Button from "@material-ui/core/Button";
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 // import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles(theme => ({
@@ -40,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     // margin: '0 auto'
   },
   card: {
-    color: '#eef3f5',
+    // color: '#eef3f5',
     display: "flex",
     flexDirection: "row",
     // justifyContent: "center",
@@ -95,17 +96,18 @@ function Page4() {
             <Card className={classes.card}>
               <div>
                 <CardContent>
-                  <IconButton size="small">
-                    <GitHubIcon />
+                  <IconButton target="_blank" href="https://github.com/andy-mc-donald" size="small">
+                    <GitHubIcon style={{fill: '#eef3f5'}}/>
                   </IconButton>
                 </CardContent>
               </div>
               <div>
                 <CardContent>
+                <Link color="textSecondary" target="_blank" href="https://github.com/andy-mc-donald">
                 <Typography variant="h6">
                   GitHub
                 </Typography>
-                  {/* <h3>GitHub</h3> */}
+                </Link>
                 </CardContent>
               </div>
             </Card>
@@ -113,16 +115,18 @@ function Page4() {
             <Card className={classes.card}>
               <div>
                 <CardContent>
-                  <IconButton  size="small">
-                    <LinkedInIcon />
+                  <IconButton target="_blank" href="https://www.linkedin.com/in/andy-mc-donald/" size="small">
+                    <LinkedInIcon style={{fill: '#eef3f5'}}/>
                   </IconButton>
                 </CardContent>
               </div>
               <div>
                 <CardContent>
+                <Link color="textSecondary" target="_blank" href="https://www.linkedin.com/in/andy-mc-donald/">
                 <Typography variant="h6">
                   LinkedIn
                 </Typography>
+                </Link>
                 </CardContent>
               </div>
             </Card>
@@ -131,15 +135,17 @@ function Page4() {
               <div>
                 <CardContent>
                   <IconButton  size="small">
-                    <GetAppIcon />
+                    <GetAppIcon style={{fill: '#eef3f5'}} />
                   </IconButton>
                 </CardContent>
               </div>
               <div>
                 <CardContent>
+                <Link color="textSecondary">
                 <Typography variant="h6">
                   CV
                 </Typography>
+                </Link>
                 </CardContent>
               </div>
             </Card>

@@ -237,7 +237,7 @@ function Page1pt2() {
        {/* <CssBaseline /> */}
       <Grid container direction="row" justify="flex-end" alignItems="center" className={classes.githubiconContainer}>
         <Grid item>
-          <IconButton aria-label="github" className={classes.githubicon}>
+          <IconButton target="_blank" href="https://github.com/andy-mc-donald" aria-label="github" className={classes.githubicon}>
             <GitHubIcon />
           </IconButton>
         </Grid>
@@ -302,13 +302,13 @@ function Page1pt2() {
             <img src={Linux} className={classes.svgIcon}></img>
         </Grid>
         <Grid item xs={12} sm={4}>
-          <IconButton aria-label="github" padding={0}>
+          <IconButton target="_blank" href="https://www.foundersandcoders.com/" aria-label="GitHub" padding={0}>
             <img src={FAC} className={classes.svgIcon2}></img>
           </IconButton>
-          <IconButton>
+          <IconButton target="_blank" href="https://www.freecodecamp.org/andy-mc-donald" aria-label="Free Code Camp">
             <img src={FCC} className={classes.svgIcon2}></img>  
           </IconButton>
-          <IconButton>  
+          <IconButton target="_blank" href="https://www.codewars.com/users/andy-mc-donald" aria-label="Codewars">  
             <img src={CodeWars} className={classes.svgIcon2}></img>
             </IconButton>
         </Grid>

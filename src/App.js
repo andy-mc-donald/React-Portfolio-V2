@@ -21,6 +21,10 @@ const theme = createMuiTheme({
       // light: 'rgba(242, 81, 27, 0.5)',
       light: '#f8a88d' 
       // dark: ''
+    },
+    text: {
+      primary: '#2b2d42',
+      secondary: '#eef3f5'
     }
   },
   overrides:{
