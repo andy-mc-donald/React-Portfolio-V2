@@ -17,7 +17,8 @@ import Sass from "../Assets/tech-stack-icons/Sass.svg";
 import FAC from "../Assets/about-me-images-svgs/FAC_logo.svg";
 import FCC from "../Assets/about-me-images-svgs/FreeCodeCamp.svg";
 import CodeWars from "../Assets/about-me-images-svgs/Codewars_logo.svg";
-import Typography from '@material-ui/core/Typography';
+import Tooltip from "@material-ui/core/Tooltip";
+import Typography from "@material-ui/core/Typography";
 // import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 // import CssBaseline from '@material-ui/core/CssBaseline';
 // import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
@@ -25,21 +26,21 @@ import Typography from '@material-ui/core/Typography';
 // let theme = createMuiTheme();
 // theme = responsiveFontSizes(theme);
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     // background: "rgba(153, 184, 195, 0.17)",
-    background: '#eef3f5',
+    background: "#eef3f5",
     height: "100vh",
-    flexGrow: 1
+    flexGrow: 1,
   },
   githubiconContainer: {
-    height: '5vh'
+    height: "5vh",
   },
   githubicon: {
     // margin: "2.5rem",
     fontSize: "xl",
     marginRight: "auto",
-    flexDirection: "flex-end"
+    flexDirection: "flex-end",
   },
   mainContainer: {
     height: "65vh",
@@ -48,24 +49,24 @@ const useStyles = makeStyles(theme => ({
     // backgroundColor: "grey"
   },
   picContainer: {
-    overflow: "hidden"
+    overflow: "hidden",
   },
   picture: {
     width: "140%",
     left: "-50%",
     position: "relative",
-    borderRadius: "30%"
+    borderRadius: "30%",
   },
   text: {
     // fontFamily: 'Roboto Slab', 'serif';
     // fontFamily: 'Helvetica Neue',
-    color: '#2b2d42',
-    marginBottom: 'auto',
+    color: "#2b2d42",
+    marginBottom: "auto",
     padding: "0px",
-    fontSize: 'calc(15px + (100 - 15) * ((100vw - 320px) / (1980 - 320)))',
+    fontSize: "calc(15px + (100 - 15) * ((100vw - 320px) / (1980 - 320)))",
     "@media screen and (min-aspect-ratio: 5/8)": {
-      fontSize: 'calc(20px + (45 - 20) * ((100vw - 320px) / (1980 - 320)))'
-      },
+      fontSize: "calc(20px + (45 - 20) * ((100vw - 320px) / (1980 - 320)))",
+    },
 
     // fontSize: "2.6vw",
     // "@media (max-width:1824px)": {
@@ -124,92 +125,92 @@ const useStyles = makeStyles(theme => ({
     // },
     // "@media (max-width: 356px)": {
     //   fontSize: "5.7vw"
-    // },         
+    // },
   },
   buttonContainer: {
     height: "10vh",
     // backgroundColor: "yellow",
   },
   button: {
-    color: '#eef3f5',
+    color: "#eef3f5",
     width: "40vw",
     maxWidth: "500px",
     fontSize: "1.4rem",
     "@media (max-width:600px)": {
-        // width: "50vw",
-    fontSize: "1.2rem",
+      // width: "50vw",
+      fontSize: "1.2rem",
     },
     "@media (max-width:460px)": {
       // width: "50vw",
-    fontSize: "1.0rem",
-  }, 
-  "@media (max-width:403px)": {
-    // width: "50vw",
-    fontSize: "0.8rem",
-},
-"@media (max-width:344px)": {
-    fontSize: "0.6rem"
-  }
-  },
-  svgContainer:{
-      height: '20vh',
-      paddingLeft: '2.5rem',
-      paddingBottom: '1rem',
-    //   marginRight: '2.5rem',
-      ['@media (max-width:600px)']: {
-        paddingLeft: '0.5rem',
-        // marginRight: '0.5rem'
+      fontSize: "1.0rem",
     },
-      // backgroundColor: 'pink',
-      // whiteSpace: 'pre-line'
-  }, 
-  svgIcon:{
-    height: '60px',
-    width: '60px',
+    "@media (max-width:403px)": {
+      // width: "50vw",
+      fontSize: "0.8rem",
+    },
+    "@media (max-width:344px)": {
+      fontSize: "0.6rem",
+    },
+  },
+  svgContainer: {
+    height: "20vh",
+    paddingLeft: "2.5rem",
+    paddingBottom: "1rem",
+    //   marginRight: '2.5rem',
+    ["@media (max-width:600px)"]: {
+      paddingLeft: "0.5rem",
+      // marginRight: '0.5rem'
+    },
+    // backgroundColor: 'pink',
+    // whiteSpace: 'pre-line'
+  },
+  svgIcon: {
+    height: "60px",
+    width: "60px",
     padding: theme.spacing(1),
     "@media (max-width: 600px)": {
-        height: "50px",
-        width: "50px",
-      }, 
+      height: "50px",
+      width: "50px",
+    },
     "@media (max-width: 528px)": {
-        height: "40px",
-        width: "40px",
-      }, 
-      "@media (max-width: 457px)": {
-        height: "30px",
-        width: "30px",
-      }, 
-      "@media (max-width: 377px)": {
-        height: "29px",
-        width: "29px",
-      }, 
-      "@media (max-width: 368px)": {
-        height: "28px",
-        width: "28px",
-      }, 
-      "@media (max-width: 360px)": {
-        height: "26px",
-        width: "26px",
-      }, 
-      "@media (max-width: 353px)": {
-        height: "25px",
-        width: "25px",
-      }, 
-      "@media (max-width: 337px)": {
-        height: "24px",
-        width: "24px",
-      }, 
-      "@media (max-width: 327px)": {
-        height: "23px",
-        width: "23px",
-      },
+      height: "40px",
+      width: "40px",
+    },
+    "@media (max-width: 457px)": {
+      height: "30px",
+      width: "30px",
+    },
+    "@media (max-width: 377px)": {
+      height: "29px",
+      width: "29px",
+    },
+    "@media (max-width: 368px)": {
+      height: "28px",
+      width: "28px",
+    },
+    "@media (max-width: 360px)": {
+      height: "26px",
+      width: "26px",
+    },
+    "@media (max-width: 353px)": {
+      height: "25px",
+      width: "25px",
+    },
+    "@media (max-width: 337px)": {
+      height: "24px",
+      width: "24px",
+    },
+    "@media (max-width: 327px)": {
+      height: "23px",
+      width: "23px",
+    },
   },
-  svgIcon2:{
-    height: '40px',
-    width: 'auto',
-    margin: '0',
+  svgIcon2: {
+    height: "40px",
+    width: "auto",
+    margin: "0",
 
-    display: 'inline-block',
+    display: "inline-block",
     // padding:0,
     minHeight: 0,
     minWidth: 0,
@@ -218,15 +219,15 @@ const useStyles = makeStyles(theme => ({
     "@media (max-width: 600px)": {
       height: "30px",
       width: "auto",
-    }, 
+    },
     "@media (max-width: 457px)": {
       height: "28px",
       width: "auto",
-    }, 
-  }, 
-  textAccent:{
-    color: '#F2511B',
-  }
+    },
+  },
+  textAccent: {
+    color: "#F2511B",
+  },
 }));
 
 function Page1pt2() {
@@ -234,10 +235,21 @@ function Page1pt2() {
 
   return (
     <div className={classes.root}>
-       {/* <CssBaseline /> */}
-      <Grid container direction="row" justify="flex-end" alignItems="center" className={classes.githubiconContainer}>
+      {/* <CssBaseline /> */}
+      <Grid
+        container
+        direction="row"
+        justify="flex-end"
+        alignItems="center"
+        className={classes.githubiconContainer}
+      >
         <Grid item>
-          <IconButton target="_blank" href="https://github.com/andy-mc-donald" aria-label="github" className={classes.githubicon}>
+          <IconButton
+            target="_blank"
+            href="https://github.com/andy-mc-donald"
+            aria-label="github"
+            className={classes.githubicon}
+          >
             <GitHubIcon />
           </IconButton>
         </Grid>
@@ -253,8 +265,10 @@ function Page1pt2() {
         </Grid>
         <Grid item xs={9} className={classes.text}>
           <h1 style={{ margin: 0 }} color="secondary">
-            Hi, I’m Andy McDonald, a junior <span className={classes.textAccent}>software developer</span>, graduate of
-            the Founders and Coders bootcamp in London and former journalist
+            Hi, I’m Andy McDonald, a junior{" "}
+            <span className={classes.textAccent}>software developer</span>,
+            graduate of the Founders and Coders bootcamp in London and former
+            journalist
           </h1>
           {/* <Typography variant="h1" style={{ margin: 0 }} className={classes.text}>
           Hi, I’m Andy McDonald, a junior software developer, graduate of
@@ -292,25 +306,54 @@ function Page1pt2() {
         className={classes.svgContainer}
       >
         <Grid item xs={12} sm={8}>
+          <Tooltip title="HTML5" arrow>
             <img src={HTML5} className={classes.svgIcon}></img>
+          </Tooltip>
+          <Tooltip title="CSS3" arrow>
             <img src={CSS3} className={classes.svgIcon}></img>
+          </Tooltip>
+          <Tooltip title="JavaScript / ES6" arrow>
             <img src={JavaScript} className={classes.svgIcon}></img>
+          </Tooltip>
+          <Tooltip title="Node.js" arrow>
             <img src={NodeJS} className={classes.svgIcon}></img>
+          </Tooltip>
+          <Tooltip title="React" arrow>
             <img src={ReactLogoSVG} className={classes.svgIcon}></img>
+          </Tooltip>
+          <Tooltip title="Sass" arrow>
             <img src={Sass} className={classes.svgIcon}></img>
+          </Tooltip>
+          <Tooltip title="Git / GitHub" arrow>
             <img src={GitHub} className={classes.svgIcon}></img>
+          </Tooltip>
+          <Tooltip title="Linux" arrow>
             <img src={Linux} className={classes.svgIcon}></img>
+          </Tooltip> 
         </Grid>
         <Grid item xs={12} sm={4}>
-          <IconButton target="_blank" href="https://www.foundersandcoders.com/" aria-label="GitHub" padding={0}>
+          <IconButton
+            target="_blank"
+            href="https://www.foundersandcoders.com/"
+            aria-label="GitHub"
+            padding={0}
+          >
             <img src={FAC} className={classes.svgIcon2}></img>
           </IconButton>
-          <IconButton target="_blank" href="https://www.freecodecamp.org/andy-mc-donald" aria-label="Free Code Camp">
-            <img src={FCC} className={classes.svgIcon2}></img>  
+          <IconButton
+            target="_blank"
+            href="https://www.freecodecamp.org/andy-mc-donald"
+            aria-label="Free Code Camp"
+          >
+            <img src={FCC} className={classes.svgIcon2}></img>
           </IconButton>
-          <IconButton target="_blank" href="https://www.codewars.com/users/andy-mc-donald" aria-label="Codewars">  
+          <IconButton
+            target="_blank"
+            href="https://www.codewars.com/users/andy-mc-donald"
+            aria-label="Codewars"
+          >
             <img src={CodeWars} className={classes.svgIcon2}></img>
-            </IconButton>
+          </IconButton>
         </Grid>
       </Grid>
     </div>

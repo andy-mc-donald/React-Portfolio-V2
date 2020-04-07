@@ -153,7 +153,7 @@ function Page4() {
         </Grid>
 
         <Grid item xs={12} sm={6} className={classes.item}>
-          <form className={classes.form}>
+          <form className={classes.form} action="mailto:andy.william.mcdonald@gmail.com" method="post" enctype="text/plain">
           <Typography variant="h6" className={classes.contactTitle}>
                   Contact
                 </Typography>
@@ -179,6 +179,8 @@ function Page4() {
               size="medium"
               buttonStyle={{ borderRadius: 50 }}
               style={{ borderRadius: 50 }}
+              type="submit"
+              value="Send"
             >
               Send
             </Button>
