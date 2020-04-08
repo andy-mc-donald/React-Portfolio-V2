@@ -15,8 +15,11 @@ const useStyles = makeStyles({
   root: {
     // maxWidth: 500,
   }, 
+  text: {
+    color: '#3e4053',
+  },
   bold: {
-    color: 'primary'
+    color: '#F2511B',
   }
 });
 
@@ -28,7 +31,7 @@ function BugBears() {
       <CardMedia src={BugBearsPic} component="img" title="Bugbears" />
       <CardContent>
         {/* <Typography variant="body2" color="textSecondary" component="p"> */}
-        <Typography paragraph variant="body1" color="textSecondary">
+        <Typography paragraph variant="body2" className={classes.text}>
           Bugbears is a dynamic web app that lets users log-in and add their
           grievances to a list of ‘pet peeves’. The project uses a PostgreSQL
           database that is connected to a Node.js server and was built using
