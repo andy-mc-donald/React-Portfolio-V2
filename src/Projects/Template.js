@@ -10,27 +10,40 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import IconButton from "@material-ui/core/IconButton";
 import WebIcon from "@material-ui/icons/Web";
 import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles({
   root: {
     // maxWidth: 500,
+    display: 'flex',
+    // flexGrow: 1,
+    // flexDirection: "row",
   }, 
   text: {
     color: '#3e4053',
   },
   bold: {
     color: '#F2511B',
-  }
-});
+  },
+  container: {
+    width: "100%",
+    margin: "2.5rem",
+    ["@media (max-width:600px)"]: {
+      margin: "0.5rem"
+    }
+  } 
+})
 
 function Template() {
     const classes = useStyles();
     const input = data; 
   return (
-    <div>
+    <div className={classes.root}>
+    <Grid container className={classes.container} spacing={3}>
       {input.map(x =>{ 
     return(
-    <Card className={classes.root} id={x.id}>
+    <Grid item xs={12} sm={6} md={4}>
+    <Card id={x.id}>
       <CardHeader title={x.name} />
       <CardMedia src={x.image} component="img" title={x.name} />
       <CardContent>
@@ -57,8 +70,10 @@ function Template() {
         </IconButton>
       </CardActions>
     </Card>
+    </Grid>
     )
     })}
+    </Grid>
     </div>
   );
 }

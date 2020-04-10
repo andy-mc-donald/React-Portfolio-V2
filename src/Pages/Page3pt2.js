@@ -9,18 +9,18 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "rgba(242, 81, 27, 0.35)",
   },
   root: {
+    // display: "flex",
     flexGrow: 1,
-    display: "flex",
     flexDirection: "row",
     justifyContent: "center",
   },
-  container: {
-    width: "100%",
-    margin: "2.5rem",
-    ["@media (max-width:600px)"]: {
-      margin: "0.5rem"
-    }
-  },
+  // container: {
+  //   width: "100%",
+  //   margin: "2.5rem",
+  //   ["@media (max-width:600px)"]: {
+  //     margin: "0.5rem"
+  //   }
+  // },
   title: {
     color: '#eef3f5',
     textShadow: '2px 2px #2b2d42',
@@ -42,11 +42,11 @@ function Page3pt2() {
         Projects
       </Typography>
       <div className={classes.root}>
-        <Grid container className={classes.container} spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
+        {/* <Grid container className={classes.container} spacing={3}> */}
+          {/* <Grid item xs={12} sm={6} md={4}> */}
             <Template />
-          </Grid>
-        </Grid>
+          {/* </Grid> */}
+        {/* </Grid> */}
       </div>
     </div>
   );
