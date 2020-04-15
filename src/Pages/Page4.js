@@ -8,23 +8,19 @@ import IconButton from "@material-ui/core/IconButton";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GetAppIcon from "@material-ui/icons/GetApp";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Input from "@material-ui/core/Input";
-import Button from "@material-ui/core/Button";
+// import FormControl from "@material-ui/core/FormControl";
+// import InputLabel from "@material-ui/core/InputLabel";
+// import Input from "@material-ui/core/Input";
+// import Button from "@material-ui/core/Button";
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 // import TextField from "@material-ui/core/TextField";
+import ContactForm from '../Components/ContactForm';
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    // color: 'white',
-    // backgroundColor: "#8d99ae",
     backgroundColor: "#2B2D42",
-    // backgroundColor: "#071E22",
-    // height: "60vh",
-    // textAlign: 'center'
   },
   container: {
     padding: "2.5rem",
@@ -35,38 +31,23 @@ const useStyles = makeStyles(theme => ({
   },
   item: {
     // textAlign: "center",
-    // display: 'flex',
-    // justifyContent: "center",
-    // alignItems: 'center'
-    // margin: '0 auto'
   },
   card: {
-    // color: '#eef3f5',
     display: "flex",
     flexDirection: "row",
-    // justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#2B2D42",
     boxShadow: "none",
-    // paddingLeft: '30%',
     height: "4rem",
-    // padding: '1rem'
-    // width: '50%',
   },
   cardCont: {
     // display: "flex",
-    // flexDirection: "column",
-    // padding: 0,
-    // border: '1px solid black'
   },
 
   form: {
     color: '#eef3f5',
     display: "flex",
     flexDirection: "column",
-    // margin: 20,
-    // padding: 20,
-    // border: '1px solid black',
     padding: '1rem'
   },
 
@@ -80,7 +61,6 @@ const useStyles = makeStyles(theme => ({
     color: '#eef3f5'
   }, 
   formText: {
-    // color: 'white'
     color: '#f8a88d'
   }
 }));
@@ -153,7 +133,8 @@ function Page4() {
         </Grid>
 
         <Grid item xs={12} sm={6} className={classes.item}>
-          <form className={classes.form} action="mailto:andy.william.mcdonald@gmail.com" method="post" enctype="text/plain">
+          <ContactForm />
+          {/* <form className={classes.form} action="mailto:andy.william.mcdonald@gmail.com" method="post" enctype="text/plain">
           <Typography variant="h6" className={classes.contactTitle}>
                   Contact
                 </Typography>
@@ -184,7 +165,7 @@ function Page4() {
             >
               Send
             </Button>
-          </form>
+          </form> */}
         </Grid>
       </Grid>
     </div>
