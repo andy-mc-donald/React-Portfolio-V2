@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from '@material-ui/core/Typography';
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles(theme => ({
     form: {
@@ -23,38 +24,70 @@ const useStyles = makeStyles(theme => ({
       }, 
 }));
 
-function ContactForm() {
+const ContactForm = props => {
     const classes = useStyles();
+
+    const [inputName, setInputName] = useState("");
+    const [inputEmail, setInputEmail] = useState("");
+    const [inputMessage, setInputMessage] = useState("");
+    
+    const onChange = e => {
+        const { value } = e.target;
+        setInputName(value);
+      }
+
+      const onChange1 = e => {
+        const { value } = e.target;
+        setInputEmail(value);
+      }
+
+      const onChange2 = e => {
+          const { value } = e.target;
+          setInputMessage(value);
+      }
+
+    const sendEmail = e => {
+        e.preventDefault();
+        setInputName('');
+        setInputEmail('');
+        setInputMessage('');
+    
+        emailjs.sendForm('gmail', 'contact_form', e.target, '***REMOVED***')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      }
+
 
   return (
     <form
       className={classes.form}
-      action="mailto:andy.william.mcdonald@gmail.com"
-      method="post"
-      enctype="text/plain"
+      onSubmit={sendEmail}  
     >
       <Typography variant="h6">
         Contact
       </Typography>
       <FormControl color="secondary">
-        <InputLabel htmlFor="name" className={classes.formText}>
+        <InputLabel htmlFor="user_name" className={classes.formText}>
           Name
         </InputLabel>
-        <Input id="name" type="text" className={classes.formText} />
+        <Input type="text" name="user_name" value={inputName} onChange={onChange} className={classes.formText} />
       </FormControl>
 
       <FormControl color="secondary">
-        <InputLabel htmlFor="email" className={classes.formText}>
+        <InputLabel htmlFor="user_email" className={classes.formText}>
           Email
         </InputLabel>
-        <Input id="email" type="email" className={classes.formText} />
+        <Input name="user_email" type="email" value={inputEmail} onChange={onChange1} className={classes.formText} />
       </FormControl>
 
       <FormControl color="secondary">
-        <InputLabel htmlFor="email" className={classes.formText}>
+        <InputLabel htmlFor="message" className={classes.formText}>
           Message
         </InputLabel>
-        <Input id="email" multiline rows={8} className={classes.formText} />
+        <Input name="message" value={inputMessage} onChange={onChange2} multiline rows={8} className={classes.formText} />
       </FormControl>
 
       <Button
