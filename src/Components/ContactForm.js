@@ -48,17 +48,19 @@ const ContactForm = props => {
 
     const sendEmail = e => {
         e.preventDefault();
-        setInputName('');
-        setInputEmail('');
-        setInputMessage('');
-    
+      
         emailjs.sendForm('gmail', 'contact_form', e.target, '***REMOVED***')
           .then((result) => {
               console.log(result.text);
           }, (error) => {
               console.log(error.text);
           });
-      }
+          alert(`Thanks for getting in touch!`);
+
+          setInputName('');
+          setInputEmail('');
+          setInputMessage('');
+        }
 
 
   return (
@@ -73,21 +75,21 @@ const ContactForm = props => {
         <InputLabel htmlFor="user_name" className={classes.formText}>
           Name
         </InputLabel>
-        <Input type="text" name="user_name" value={inputName} onChange={onChange} className={classes.formText} />
+        <Input required={true} type="text" name="user_name" value={inputName} onChange={onChange} className={classes.formText} />
       </FormControl>
 
       <FormControl color="secondary">
         <InputLabel htmlFor="user_email" className={classes.formText}>
           Email
         </InputLabel>
-        <Input name="user_email" type="email" value={inputEmail} onChange={onChange1} className={classes.formText} />
+        <Input required={true} name="user_email" type="email" value={inputEmail} onChange={onChange1} className={classes.formText} />
       </FormControl>
 
       <FormControl color="secondary">
         <InputLabel htmlFor="message" className={classes.formText}>
           Message
         </InputLabel>
-        <Input name="message" value={inputMessage} onChange={onChange2} multiline rows={8} className={classes.formText} />
+        <Input required={true} name="message" value={inputMessage} onChange={onChange2} multiline rows={8} className={classes.formText} />
       </FormControl>
 
       <Button
