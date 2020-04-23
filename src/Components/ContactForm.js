@@ -48,8 +48,10 @@ const ContactForm = props => {
 
     const sendEmail = e => {
         e.preventDefault();
-      
-        emailjs.sendForm('gmail', 'contact_form', e.target, '***REMOVED***')
+        
+        const USER_ID = process.env.REACT_APP_USER_ID;
+
+        emailjs.sendForm('gmail', 'contact_form', e.target, USER_ID)
           .then((result) => {
               console.log(result.text);
           }, (error) => {
@@ -69,7 +71,7 @@ const ContactForm = props => {
       onSubmit={sendEmail}  
     >
       <Typography variant="h6">
-        Contact
+        Contacty
       </Typography>
       <FormControl color="secondary">
         <InputLabel htmlFor="user_name" className={classes.formText}>
