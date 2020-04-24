@@ -71,7 +71,7 @@ const ContactForm = props => {
       onSubmit={sendEmail}  
     >
       <Typography variant="h6">
-        Contacty
+        Contact
       </Typography>
       <FormControl color="secondary">
         <InputLabel htmlFor="user_name" className={classes.formText}>
