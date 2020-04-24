@@ -1,6 +1,6 @@
 import React from "react";
 import Page1 from "./Pages/Page1";
-import Page3pt2 from "./Pages/Page3pt2";
+import Page2 from "./Pages/Page2";
 import Page4 from "./Pages/Page4";
 import "./App.css";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
@@ -39,7 +39,7 @@ function App() {
     <MuiThemeProvider theme={theme}>
     <div className="App">
       <Page1 />
-      <Page3pt2 />
+      <Page2 />
       <Page4 />
     </div>
     </MuiThemeProvider>
