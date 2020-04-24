@@ -1,9 +1,9 @@
-import UpSkillMePic from "./Assets/project-images/UpSkillMe.png";
-import FoodMilesPic from "./Assets/project-images/FoodMiles.png";
-import BugBearsPic from "./Assets/project-images/BugBears.png";
-import ProjectFearPic from "./Assets/project-images/ProjectFear.png";
-import WikipediaLookupPic from "./Assets/project-images/WikipediaCountryLookup.png";
-import TrainspirationPic from "./Assets/project-images/Trainspiration.png";
+import UpSkillMePic from "../Assets/project-images/UpSkillMe.png";
+import FoodMilesPic from "../Assets/project-images/FoodMiles.png";
+import BugBearsPic from "../Assets/project-images/BugBears.png";
+import ProjectFearPic from "../Assets/project-images/ProjectFear.png";
+import WikipediaLookupPic from "../Assets/project-images/WikipediaCountryLookup.png";
+import TrainspirationPic from "../Assets/project-images/Trainspiration.png";
 
 const data = [
     {
