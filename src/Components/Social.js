@@ -1,6 +1,5 @@
 import React from "react";
 import {
-//   Grid,
   Card,
   CardContent,
   IconButton,
@@ -13,16 +12,6 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GetAppIcon from "@material-ui/icons/GetApp";
 
 const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//     backgroundColor: "#2B2D42",
-//   },
-//   container: {
-//     padding: "2.5rem",
-//     "@media (max-width:600px)": {
-//       padding: "1rem",
-//     },
-//   },
   card: {
     display: "flex",
     flexDirection: "row",
@@ -30,30 +19,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#2B2D42",
     boxShadow: "none",
     height: "4rem",
-  },
-//   form: {
-//     color: "#eef3f5",
-//     display: "flex",
-//     flexDirection: "column",
-//     padding: "1rem",
-//   },
-//   button: {
-//     width: "20%",
-//     marginTop: "1rem",
-//     color: "#eef3f5",
-//   },
-//   formText: {
-//     color: "#f8a88d",
-//   },
+  }
 }));
 
 function Social() {
   const classes = useStyles();
 
   return (
-    // <div className={classes.root}>
-    //   <Grid container className={classes.container}>
-    //     <Grid item xs={12} sm={6} className={classes.item}>
           <div>
             <Card className={classes.card}>
               <div>
@@ -122,10 +94,6 @@ function Social() {
               </div>
             </Card>
           </div>
-    //     </Grid>
-
-    //   </Grid>
-    // </div>
   );
 }
 
