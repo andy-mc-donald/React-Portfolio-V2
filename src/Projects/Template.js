@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   container: {
     width: "100%",
     margin: "2.5rem",
-    ["@media (max-width:600px)"]: {
+    "@media (max-width:600px)": {
       margin: "0.5rem",
     },
   },

@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     textShadow: "2px 2px #2b2d42",
     paddingLeft: "3.3rem",
     paddingTop: "1.5rem",
-    ["@media (max-width:600px)"]: {
+    "@media (max-width:600px)": {
       paddingLeft: "1.2rem",
       paddingTop: "1.5rem",
     },

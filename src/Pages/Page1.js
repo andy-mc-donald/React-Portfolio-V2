@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     height: "20vh",
     paddingLeft: "2.5rem",
     paddingBottom: "1rem",
-    ["@media (max-width:600px)"]: {
+    "@media (max-width:600px)": {
       paddingLeft: "0.5rem",
     },
   },
@@ -176,7 +176,7 @@ function Page1() {
         <Grid item xs={2} className={classes.picContainer}>
           <img
             src={AndyPic}
-            alt="Andy McDonald picture"
+            alt="Andy McDonald"
             className={classes.picture}
           />
         </Grid>
@@ -220,52 +220,52 @@ function Page1() {
       >
         <Grid item xs={12} sm={8}>
           <Tooltip title="HTML5" arrow>
-            <img src={HTML5} className={classes.svgIcon}></img>
+            <img src={HTML5} className={classes.svgIcon} alt="HTML5"></img>
           </Tooltip>
           <Tooltip title="CSS3" arrow>
-            <img src={CSS3} className={classes.svgIcon}></img>
+            <img src={CSS3} className={classes.svgIcon} alt="CSS3"></img>
           </Tooltip>
           <Tooltip title="JavaScript / ES6" arrow>
-            <img src={JavaScript} className={classes.svgIcon}></img>
+            <img src={JavaScript} className={classes.svgIcon} alt="JavaScript ES6"></img>
           </Tooltip>
           <Tooltip title="Node.js" arrow>
-            <img src={NodeJS} className={classes.svgIcon}></img>
+            <img src={NodeJS} className={classes.svgIcon} alt="Node.js"></img>
           </Tooltip>
           <Tooltip title="React" arrow>
-            <img src={ReactLogoSVG} className={classes.svgIcon}></img>
+            <img src={ReactLogoSVG} className={classes.svgIcon} alt="React"></img>
           </Tooltip>
           <Tooltip title="Sass" arrow>
-            <img src={Sass} className={classes.svgIcon}></img>
+            <img src={Sass} className={classes.svgIcon} alt="Sass"></img>
           </Tooltip>
           <Tooltip title="Git / GitHub" arrow>
-            <img src={GitHub} className={classes.svgIcon}></img>
+            <img src={GitHub} className={classes.svgIcon} alt="Git GitHub"></img>
           </Tooltip>
           <Tooltip title="Linux" arrow>
-            <img src={Linux} className={classes.svgIcon}></img>
+            <img src={Linux} className={classes.svgIcon} alt="Linux"></img>
           </Tooltip>
         </Grid>
         <Grid item xs={12} sm={4}>
           <IconButton
             target="_blank"
             href="https://www.foundersandcoders.com/"
-            aria-label="GitHub"
+            aria-label="Founders and Coders"
             padding={0}
           >
-            <img src={FAC} className={classes.svgIcon2}></img>
+            <img src={FAC} className={classes.svgIcon2} alt="Founders and Coders"></img>
           </IconButton>
           <IconButton
             target="_blank"
             href="https://www.freecodecamp.org/andy-mc-donald"
             aria-label="Free Code Camp"
           >
-            <img src={FCC} className={classes.svgIcon2}></img>
+            <img src={FCC} className={classes.svgIcon2} alt="Free Code Camp"></img>
           </IconButton>
           <IconButton
             target="_blank"
             href="https://www.codewars.com/users/andy-mc-donald"
             aria-label="Codewars"
           >
-            <img src={CodeWars} className={classes.svgIcon2}></img>
+            <img src={CodeWars} className={classes.svgIcon2} alt="CodeWars"></img>
           </IconButton>
         </Grid>
       </Grid>
