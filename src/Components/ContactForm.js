@@ -68,7 +68,7 @@ const ContactForm = props => {
   return (
     <form
       className={classes.form}
-      onSubmit={sendEmail}  
+      onSubmit={sendEmail} 
     >
       <Typography variant="h6">
         Contact
