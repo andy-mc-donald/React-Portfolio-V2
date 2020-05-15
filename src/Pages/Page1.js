@@ -19,6 +19,7 @@ import Sass from "../Assets/tech-stack-icons/Sass.svg";
 import FAC from "../Assets/about-me-images-svgs/FAC_logo.svg";
 import FCC from "../Assets/about-me-images-svgs/FreeCodeCamp.svg";
 import CodeWars from "../Assets/about-me-images-svgs/Codewars_logo.svg";
+import CV from "../Assets/Andy_McDonald_CV.pdf";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -202,7 +203,8 @@ function Page1() {
             variant="contained"
             size="large"
             color="primary"
-            href=""
+            target="_blank"
+            href={CV}
             buttonStyle={{ borderRadius: 50 }}
             style={{ borderRadius: 50 }}
             className={classes.button}

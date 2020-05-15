@@ -10,6 +10,7 @@ import {
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GetAppIcon from "@material-ui/icons/GetApp";
+import CV from "../Assets/Andy_McDonald_CV.pdf";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -80,14 +81,22 @@ function Social() {
             <Card className={classes.card}>
               <div>
                 <CardContent>
-                  <IconButton size="small">
+                  <IconButton 
+                    target="_blank"
+                    href={CV}
+                    size="small"
+                  >
                     <GetAppIcon style={{ fill: "#eef3f5" }} />
                   </IconButton>
                 </CardContent>
               </div>
               <div>
                 <CardContent>
-                  <Link color="textSecondary">
+                  <Link 
+                    color="textSecondary"
+                    target="_blank"
+                    href={CV}
+                  >
                     <Typography variant="h6">CV</Typography>
                   </Link>
                 </CardContent>
